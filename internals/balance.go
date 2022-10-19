@@ -4,15 +4,16 @@ import (
 	"fmt"
 )
 
-var balance float64
+var balance float64 // The amount of money a user has
 
+// AccountBalance() prints out the balance of the user
 func AccountBalance() {
 	fmt.Printf("Your account Balance is %.2f naira", balance)
 	newLine(1)
 }
 
+// WithdrawFunds() handles the logic of withdrawing funds from the user account
 func WithdrawFunds() {
-
 	newLine(1)
 	fmt.Println("Withdraw funds")
 	var amount float64
@@ -40,8 +41,8 @@ func WithdrawFunds() {
 	fmt.Printf("Amount withdrawn: %.2f  naira,\nCurrnent balance: %.2f  naira", amount, balance)
 }
 
+// DepositFunds() function handles the Deposit operations
 func DepositFunds() {
-	//This function handles the Deposit operations
 	newLine(1)
 	fmt.Println("deposit funds")
 	var amount float64

@@ -7,15 +7,21 @@ import (
 	g "github.com/clintonMF/altschool-go-task-3/internals"
 )
 
+// welcome prints welcome message for the user
 func welcome() {
 	fmt.Println("*******{ Welcome to the ATM CLI app 🍾 }*******")
 }
 
+// exitProgram() is used to exit the cli application
 func exitProgram() {
 	fmt.Println("Goodbye 👋")
 	os.Exit(0)
 }
 
+/*
+newLine takes in an integer as an argument and returns the integer
+number of new lines
+*/
 func newLine(n int) {
 	for n > 0 {
 		fmt.Println("")
@@ -23,6 +29,10 @@ func newLine(n int) {
 	}
 }
 
+/*
+anotherOperation() is used to ask the user if they want to perform
+another  operation or exit the program
+*/
 func anotherOperation() {
 	var yesOrNo string
 	newLine(2)
@@ -35,6 +45,10 @@ func anotherOperation() {
 	exitProgram()
 }
 
+/*
+menu function handles the display and selection of operation in
+the cli application
+*/
 func menu() {
 	newLine(1)
 	fmt.Println("Select Operation:")

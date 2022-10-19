@@ -4,6 +4,8 @@ import "fmt"
 
 var pin string = "0000"
 
+/* newLine takes in an integer as an argument and returns the integer
+number of new lines */
 func newLine(n int) {
 	for n > 0 {
 		fmt.Println("")
@@ -11,6 +13,7 @@ func newLine(n int) {
 	}
 }
 
+// Login() handles the user login
 func Login() {
 	for {
 
@@ -22,9 +25,11 @@ func Login() {
 	}
 }
 
+/* VerifyPin - handles pin verification
+ arg := pin string
+return => bool (true if the input matches the pic and false if otherwise)
+*/
 func VerifyPin(pin string) bool {
-	// arg := pin string
-	// return => bool (true if the input matches the pic and false if otherwise)
 	var input_pin string
 	fmt.Printf("ENTER PIN: ")
 	fmt.Scan(&input_pin)
@@ -37,6 +42,7 @@ func VerifyPin(pin string) bool {
 	return true
 }
 
+// changePin() is used to change the user pin
 func ChangePin() {
 	newLine(1)
 	fmt.Println("change pin")
