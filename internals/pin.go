@@ -1,0 +1,57 @@
+package internals
+
+import "fmt"
+
+var pin string = "0000"
+
+func newLine(n int) {
+	for n > 0 {
+		fmt.Println("")
+		n--
+	}
+}
+
+func Login() {
+	for {
+
+		if !VerifyPin(pin) {
+			continue
+		}
+
+		break
+	}
+}
+
+func VerifyPin(pin string) bool {
+	// arg := pin string
+	// return => bool (true if the input matches the pic and false if otherwise)
+	var input_pin string
+	fmt.Printf("ENTER PIN: ")
+	fmt.Scan(&input_pin)
+
+	if pin != input_pin {
+		fmt.Println("Incorrect pin")
+		return false
+	}
+
+	return true
+}
+
+func ChangePin() {
+	newLine(1)
+	fmt.Println("change pin")
+	for {
+		fmt.Printf("Enter new pin: ")
+		var new_pin string
+		fmt.Scan(&new_pin)
+
+		if len(new_pin) != 4 {
+			fmt.Println("Pin should be 4 characters long")
+			continue
+		}
+
+		pin = new_pin
+		fmt.Println("Pin has been changed")
+		break
+	}
+}
