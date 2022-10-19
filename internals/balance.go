@@ -4,10 +4,10 @@ import (
 	"fmt"
 )
 
-var balance int
+var balance float64
 
 func AccountBalance() {
-	fmt.Printf("Your account Balance is %v naira", balance)
+	fmt.Printf("Your account Balance is %.2f naira", balance)
 	newLine(1)
 }
 
@@ -15,7 +15,7 @@ func WithdrawFunds() {
 
 	newLine(1)
 	fmt.Println("Withdraw funds")
-	var amount int
+	var amount float64
 
 	if balance == 0 {
 		fmt.Println("Your account is empty, please try to make a deposit before trying to withdraw")
@@ -30,21 +30,21 @@ func WithdrawFunds() {
 
 	if amount > balance {
 		fmt.Println("insufficienCt balance")
-		fmt.Printf("Currnent balance: %v naira", balance)
+		fmt.Printf("Currnent balance: %.2f naira", balance)
 		return
 	}
 	prev_balance := balance
 	balance -= amount
 
-	fmt.Printf("\nPrevious balance: %v\n", prev_balance)
-	fmt.Printf("Amount withdrawn: %v naira,\nCurrnent balance: %v naira", amount, balance)
+	fmt.Printf("\nPrevious balance: %.2f \n", prev_balance)
+	fmt.Printf("Amount withdrawn: %.2f  naira,\nCurrnent balance: %.2f  naira", amount, balance)
 }
 
 func DepositFunds() {
 	//This function handles the Deposit operations
 	newLine(1)
 	fmt.Println("deposit funds")
-	var amount int
+	var amount float64
 	fmt.Printf("Enter amount: ")
 	fmt.Scan(&amount)
 	if amount < 0 {
@@ -56,5 +56,5 @@ func DepositFunds() {
 	balance += amount
 
 	newLine(1)
-	fmt.Printf("Previous Balance - %v naira,\nCurrnt balance - %v naira", prev_balance, balance)
+	fmt.Printf("Previous Balance: %.2f  naira,\nCurrnt balance: %.2f naira", prev_balance, balance)
 }
