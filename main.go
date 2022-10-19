@@ -25,14 +25,16 @@ func newLine(n int) {
 
 func anotherOperation() {
 	var yesOrNo string
-	newLine(1)
+	newLine(2)
 	fmt.Println("Do you want to perform another operation")
 	fmt.Println("if Yes type y, else type anything")
 	fmt.Scan(&yesOrNo)
 	if yesOrNo == "y" {
 		menu()
 	}
+	exitProgram()
 }
+
 func menu() {
 	newLine(1)
 	fmt.Println("Select Operation:")
