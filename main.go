@@ -14,7 +14,7 @@ func welcome() {
 
 // exitProgram() is used to exit the cli application
 func exitProgram() {
-	fmt.Println("Goodbye 👋")
+	fmt.Println("Thanks for using our service. Have a great time.")
 	os.Exit(0)
 }
 
